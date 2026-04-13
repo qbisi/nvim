@@ -117,6 +117,18 @@ pcall(function()
       border = "curved",
     },
   })
+
+  local Terminal = require("toggleterm.terminal").Terminal
+  local codex = Terminal:new({
+    cmd = "codex",
+    direction = "float",
+    close_on_exit = false,
+    hidden = true,
+  })
+
+  map({ "n", "t" }, "<leader>cc", function()
+    codex:toggle()
+  end, { desc = "Toggle Codex" })
 end)
 
 pcall(function()
