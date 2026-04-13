@@ -101,7 +101,9 @@ pcall(function()
 end)
 
 pcall(function()
-  require("auto-session").setup({})
+  require("auto-session").setup({
+    auto_restore_last_session = true,
+  })
 end)
 
 pcall(function()
@@ -536,4 +538,3 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "help",
   command = "only | set buflisted",
 })
-
