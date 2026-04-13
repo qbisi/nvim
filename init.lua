@@ -111,12 +111,7 @@ pcall(function()
 end)
 
 pcall(function()
-  require("toggleterm").setup({
-    direction = "float",
-    float_opts = {
-      border = "curved",
-    },
-  })
+  require("toggleterm").setup({})
 
   local Terminal = require("toggleterm.terminal").Terminal
   local codex = Terminal:new({
@@ -416,7 +411,7 @@ map("n", "<S-Down>", "V<S-Down>", { silent = true })
 map("n", "<S-Left>", "v<S-Left>", { silent = true })
 map("n", "<S-Right>", "v<S-Right>", { silent = true })
 
-map({ "n", "t" }, "<C-\\>", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
+map({ "n", "t" }, "<C- >", "<cmd>ToggleTerm<CR>", { desc = "Toggle Terminal" })
 
 map("n", "<leader>bp", "<cmd>BufferLineTogglePin<CR>", { desc = "Toggle Pin" })
 map("n", "<leader>bP", "<cmd>BufferLineGroupClose ungrouped<CR>", { desc = "Delete Non-Pinned Buffers" })
